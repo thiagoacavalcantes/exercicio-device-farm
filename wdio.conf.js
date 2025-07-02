@@ -2,8 +2,8 @@ export const config = {
     // runner: 'local',
     // port: 4723,
 
-        user: '**************93aa7',
-        key: '****************cb',
+        user: 'oauth-huggies.puente-43731',
+        key: 'ac6aa09c-532b-4c55-86da-48caea6f1453',
         hostname: 'ondemand.us-west-1.saucelabs.com',
         port: 443,
         baseUrl: 'wd/hub',
