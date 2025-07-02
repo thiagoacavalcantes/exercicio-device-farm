@@ -3,8 +3,8 @@ import allure from 'allure-commandline';
 import video from 'wdio-video-reporter';
 
 export const config = {
-    user: 'oauth-casamenthis-ee5b6',
-    key: '*****eab9',
+    user: 'oauth-huggies.puente-43731',
+    key: 'ac6aa09c-532b-4c55-86da-48caea6f1453',
     hostname: 'ondemand.us-west-1.saucelabs.com',
     port: 443,         
     baseUrl: 'wd/hub',            
