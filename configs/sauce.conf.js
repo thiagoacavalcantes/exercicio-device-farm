@@ -5,7 +5,7 @@ const { generalConf } = require('./general.conf')
 let capabilities = process.env.PLATFORM === 'android' ? {
     capabilities: [{
         platformName: "android",
-        "appium:app": "storage:filename=loja-ebac.apk",
+        "appium:app": "storage:filename=ebacshop.aab",
         "appium:deviceName": "Samsung.*Galaxy.*",
         "appium:platformVersion": "10",
         "sauce:options": {
