@@ -6,7 +6,7 @@ let capabilities = process.env.PLATFORM === 'android' ? {
     capabilities: [{
         platformName: "android",
         "appium:app": "storage:filename=ebacshop.aab",
-        "appium:deviceName": "Android GoogleAPI",
+        "appium:deviceName": "Android GoogleAPI Emulator",
         "appium:platformVersion": "14.0",
         "sauce:options": {
           "name": "Teste Login EBAC Android"
@@ -14,7 +14,7 @@ let capabilities = process.env.PLATFORM === 'android' ? {
       }]
 } : {
     capabilities: [{
-        platformName: "iOS",
+        platformName: "iOs",
         "appium:app": "storage:filename=LojaEBAC-sim.zip",
         "appium:deviceName": "iPhone Simulator",
         "appium:platformVersion": "current_major",
