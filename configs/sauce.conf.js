@@ -14,10 +14,10 @@ let capabilities = process.env.PLATFORM === 'android' ? {
       }]
 } : {
     capabilities: [{
-        platformName: "iOs",
-        "appium:app": "storage:filename=LojaEBAC.ipa",
-        "appium:deviceName": "iPhone.*",
-        "appium:platformVersion": "15.1",
+        platformName: "iOS",
+        "appium:app": "storage:filename=LojaEBAC-sim.zip",
+        "appium:deviceName": "iPhone Simulator",
+        "appium:platformVersion": "current_major",
         "sauce:options": {
           "name": "Teste Login EBAC IOS"
         }
