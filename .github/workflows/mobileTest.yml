@@ -1,26 +1,33 @@
 name: EBAC CI Mobile
 
 on:
-    push:
-        branches: [ci]
-    workflow_dispatch:
+  push:
+    branches: [ci]
+  workflow_dispatch:
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-    
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-              with:
-                node-version: "14"
-            - name: Install Dependencies
-              run: npm i
-            - name: Run tests
-              run: npm test
-            - name: Publish Report
-              uses: peaceiris/actions-gh-pages@v3
-              if: always()
-              with:
-                github_token: ${{secrets.GITHUB_TOKEN}}
-                publish_dir: ./alure-repot
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install Dependencies
+        run: npm i
+      - name: Install Allure
+        run: npm install -g allure-commandline --save-dev
+      - name: Run tests
+        run: npm test
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: ./allure-report
+      - name: Publish Report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: ./allure-report
